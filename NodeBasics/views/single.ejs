@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/single.css">
+</head>
+<body>
+    <a href="/blogs" class="back">🔙</a>
+    <div class="blog">
+        <% if (blog != null) { %>
+            
+            <a href="/blogs/<%= blog._id %> "><h2 class = "title" ><%= blog.title %></h2></a>
+            <p class="snippet"><%= blog.snippet %></p>
+            <h3 class="body"><%= blog.body %> </h3>
+            <a  class = "delete" href="" data-doc = <%= blog._id %> >&nbsp;&nbsp;<i class="fa fa-trash" aria-hidden="true">&nbsp;&nbsp;</i></a>
+            <a class = "update" href="/blogs/update/<%= blog._id %> ">&nbsp;&nbsp;<i class="fa fa-refresh" aria-hidden="true">&nbsp;&nbsp;</i></a>
+            
+        <% } %>
+    </div>
+    <script src="/javascripts/delete.js"></script>
+</body>
+</html>

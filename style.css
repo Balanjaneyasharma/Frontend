@@ -1,0 +1,12 @@
+
+.nav{
+    height: 100pc;
+    width: 100%;
+    
+    .fixed{
+        position: fixed;
+    }
+
+}
+
+

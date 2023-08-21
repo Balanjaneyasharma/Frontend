@@ -1,0 +1,104 @@
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    box-sizing: border-box;
+    height: max-content;
+    width: 100%;
+    display: flex;
+    background-color: #256D85;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+::-webkit-scrollbar{
+    width : 10px;
+}
+::-webkit-scrollbar-track{
+
+    background: lightslategray;
+    border-radius: 10px;
+    width : 60px;
+    border: 2px soid lightblue;
+    box-shadow:inset  5px 5px  5px 0px rgba(0, 0, 0, 0.3);
+}
+::-webkit-scrollbar-thumb{
+    width : 1px;
+    background: #628E90;
+    border-radius: 10px;;
+}
+a.create{
+    text-decoration: none;
+    position :absolute;
+    top: 30px;
+    right : 30px;
+    padding: 10px;
+    border-radius: 0.5rem;
+    background-color: lightslategray;
+    box-shadow: 2px 2px  5px 1px rgba(0, 0, 0, 0.3);
+}
+.blogContent{
+    height: max-content;
+    width: max-content;
+    padding: 25px;
+    display: grid;
+    grid-template-areas: "a1 a2 a3 a4 a5" ;
+    gap: 23px;
+}
+.blog{
+    height: 120px;
+    width: 200px;
+    color:  black;
+    padding:  20px;
+    background-color: lightslategrey;
+    border-radius: 25px;
+   box-shadow: 5px 5px  5px 0px rgba(0, 0, 0, 0.3);
+
+    text-align: center;
+}
+a{
+    color: black;
+}
+@media only screen and (max-width : 520px){
+    .blogContent{
+        height: max-content;
+        width: max-content;
+        padding: 25px;
+        display: grid;
+        grid-template-areas: "a1" ;
+        gap: 23px;
+    }
+}
+@media (min-width : 520px) and (max-width : 768px){
+    .blogContent{
+        height: max-content;
+        width: max-content;
+        padding: 25px;
+        display: grid;
+        grid-template-areas: "a1 a2" ;
+        gap: 23px;
+    }
+}
+@media (min-width : 769px) and (max-width : 1045px){
+    .blogContent{
+        height: max-content;
+        width: max-content;
+        padding: 25px;
+        display: grid;
+        grid-template-areas: "a1 a2 a3" ;
+        gap: 23px;
+    }
+}
+@media (min-width : 1046px) and (max-width : 1300px){
+    .blogContent{
+        height: max-content;
+        width: max-content;
+        padding: 25px;
+        display: grid;
+        grid-template-areas: "a1 a2 a3 a4" ;
+        gap: 23px;
+    }
+}
+

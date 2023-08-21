@@ -1,0 +1,125 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family:'Railway Dots','Times New Roman', Times,serif  'sans-serif';
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: lightgray;
+}
+.changeMode{
+    position: absolute;
+    height: 25px;
+    width: 50px;
+    top: 20px;
+    right : 20px;
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    border-radius: 14px;
+    background-color: white;
+}
+.changeMode .circle{
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: lightgrey;
+    transition: all 1s;
+}
+.mainbox{
+    height: max-content;
+    width: max-content;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    background-color:lightgrey;
+    border: 8px solid lightgray;
+    box-shadow: 1px 1px 15px 4px whitesmoke;
+    border-radius: 90px;;
+    overflow: scroll;
+}
+.inputBox{
+    height: 9rem;
+    width: 29rem;
+    padding: 2rem;
+    overflow: scroll;
+    color: black;
+    border-radius: 50px;
+    font-size: 3rem;
+    background-color: lightgrey;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 30px;
+    box-shadow:  inset -2px -2px 10px #fffefe, inset  2px 2px 10px #4e4e4e70;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+.grid-Container{
+    display: grid;
+    gap: 10px;
+    justify-content: center;
+    grid-template-areas: "btn1 btn2 btn3 btn4";
+}
+.grid-Container button{
+    height: 90px;
+    width: 90px;
+    background-color: lightgray;
+    text-align: center;
+    border-radius: 2.2rem;
+    font-size: 1.5rem;
+    border: none;
+    box-shadow:  -2px -2px 10px #fffefe, 2px 2px 10px #4e4e4e70;
+}
+.grid-Container button:hover{
+    transform: scale(0.9);
+}
+#warn{
+    color: red;
+}
+@media only screen and (max-width : 767px){
+    .inputBox{
+        height: 5rem;
+        width: 13rem;
+        padding: 2rem;
+        overflow: scroll;
+        color: black;
+        border-radius: 1rem;
+        font-size: 1.5rem;
+        background-color: lightgray;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-start;
+        align-items: center;
+        margin-bottom: 30px;
+        box-shadow:  inset -2px -2px 10px #fffefe, inset  2px 2px 10px #4e4e4e70;
+    }
+    .grid-Container button{
+        height: 45px;
+        width: 45px;
+        background: linear-gradient(lightgray);
+        text-align: center;
+        border-radius: 0.9rem;
+        font-size: 1.1rem;
+        border: none;
+        box-shadow:  -2px -2px 10px #fffefe, 2px 2px 10px #4e4e4e70;
+    }
+    h4{
+        font-size: 1.2rem;
+    }
+    .mainbox{
+        border-radius: 1.9rem;
+    }
+}

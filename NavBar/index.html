@@ -1,0 +1,201 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>MyVaccine</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://kit.fontawesome.com/1394c46e0a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="NavBar.css">
+</head>
+<body>
+    <div class="main">
+        <a href="#home"><i  class="fa-solid fa-circle-chevron-up fa-3x arrow"></i></a>
+        <nav>
+            <h1>My<span>Vaccine</span></h1>
+            <div class="links">
+                <h2><a href="#fourdiv">Home</a></h2>
+                <h2><a href="#contact">Contact</a></h2>
+                <h2><a href="#about">About</a></h2>
+                <h2><a href="#support">Support</a></h2>
+            </div>
+            <button id ="vaccination"><p>get vaccinated</p></button>
+            <i class="fa-solid fa-bars menu fa-lg" onclick="action()"></i>
+        </nav>
+        
+        <div class="display" id="home">
+            <p>Get Tested Early</p>
+            <!--<button >Find out more</button>-->
+        </div>
+
+        <div class="fourdiv" id="fourdiv">
+            <div class="item item1">
+                <i class="fa-solid fa-virus-covid fa-3x"></i>
+                <h2>Covid</h2>
+                <p>I Dont Know What to place here</p>
+                <br>
+            </div>
+            <div class="item item2">
+                <i class="fa-solid fa-microscope fa-3x"></i>
+                <h2>Microscope</h2>
+                <p>I Dont Know What to place here</p>
+                <br>
+            </div>
+            <div class="item item3">
+                <i class="fa-solid fa-flask-vial fa-3x"></i>
+                <h2>Solution</h2>
+                <p>I Dont Know What to place here</p>
+                <br>
+            </div>
+            <div class="item item4">
+                <i class="fa-solid fa-laptop-medical fa-3x"></i>  
+                <h2>Monitoring</h2>  
+                <p>I Dont Know What to place here</p>
+                <br>
+            </div>
+        </div>
+        
+        <div class ="details" id="contact">
+            <div class="image1"></div>
+            <div class="content1">
+                <h1>Getting Vaccinated is easier than ever</h1>
+                <h3>Mon-Fri: 9 AM – 6 PM</h3>
+                <h3>Saturday: 9 AM – 4 PM</h3>
+                <h3>Sunday: Closed</h3>
+            </div>
+            <div class="content2">
+                <button><h1>Book Your Slot</h1></button>
+            </div>
+            <div class="image2 "></div>
+        </div>
+
+        <div class="steps"  id="about">
+            <div class="first">
+                <div class="circularpic circularpic1"></div>
+                <h2>Book Appointment</h2>
+                <p>I Dont Know What to place here</p>
+                <i class="fa-solid fa-arrow-right"></i>
+            </div>
+            <div class="second">
+                <div class="circularpic circularpic2"></div>
+                <h2>Get Vaccinated</h2>
+                <p>I Dont Know What to place here</p>
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </div>
+            <div class="third">
+                <div class="circularpic circularpic3"></div>
+                <h2>Get Consulatncy</h2>
+                <p>I Dont Know What to place here</p>
+                <i class="fa-solid fa-arrow-right"></i>
+            </div>
+        </div>
+     
+        <div class="information">
+            <div class="infopic"></div>
+            <div class="infomatter">
+                <h1 style="font-weight: bolder;font-size:xx-large;">Vaccination</h1>
+                <li><h3>It Reduces Your Rissk of Infection</h3></li>
+                <li><h3>It can help your un/new born baby</h3></li>
+                <li><h3>It protects against severe illness.</h3></li>
+                <li><h3>It Increases your Immunity</h3></li>
+            </div>
+        </div>
+
+        
+        <div class="oath">
+            <h1>We Provide Vaccination for every citizen</h1>
+        </div>
+
+
+        <progress max = "100" value = "90"></progress>
+
+        <!-- <div class="overcontainer">
+            <div class="containerimg"></div>
+        </div> -->
+        
+        <div class="scrollmain">
+            <div class="scrimg sc1"></div>
+            <div class="scrimg sc2"></div>
+            <div class="scrimg sc3"></div>
+            <div class="scrimg sc4"></div>
+            <div class="scrimg sc5"></div>
+            <div class="scrimg sc6"></div>
+            <div class="scrimg sc7"></div>
+            <div class="scrimg sc8"></div>
+            
+        </div>
+
+
+        
+        <div class="support" id="support">
+            <h3>Copyright © 2022</h3>
+            <div class="names">
+                <p>Ethics</p>
+                <p>OwnerShip</p>
+                <p>Partnership</p>
+                <p>Disclaimer</p>
+                <p>Policy</p>
+                <p>Corrections</p>
+            </div>
+            
+            <div class="names">
+                <p>Home</p>
+                <p>Contact</p>
+                <p>Terms</p>
+                <p>Privacy</p>
+                <p>Copywright</p>
+                <p>About</p>
+                <p>Fact</p>
+            </div>
+            
+            <h2>My<span>Vaccine</span></h2>
+            <br>
+            <br>
+            <br>
+        </div>
+        
+        <center>
+            <div class="link" id="col">
+                <div  class="closed"><button id="close" onclick="action2()"><i class="fa-solid fa-xmark fa-2xl"></i></button></div>
+                <a href="#fourdiv" onclick="action2()">Home</a>
+                <a href="#contact" onclick="action2()">Contact</a>
+                <a href="#about" onclick="action2()" >About</a>
+                <a href="#support" onclick="action2()" >Support</a>
+                <button id = "vaccination" onclick="action2()" >get vaccinated</button>
+                <br><br>
+            </div>
+        </center>
+
+
+    </div>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+          offset:400,
+          duration:1000
+      });
+    </script>
+    <script>
+        function action(){
+                document.getElementById("col").style.right = "0px";
+        }
+        function action2(){
+            document.getElementById("col").style.right = "-800px";
+        }
+        /*
+        background-color: rgb(143, 179, 200);
+        <!--@media only screen and ((min-width : 652px) and (max-width: 100%)){
+            
+            #col{
+                display: none;
+                height: 0vh;
+                width: 0%;
+            }
+        };
+        */
+    </script>
+</body>
+</html>

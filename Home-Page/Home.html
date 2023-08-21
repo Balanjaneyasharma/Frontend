@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="Home.css">
+    <title>Home-Website</title>
+</head>
+<body>
+    <div class="banner">
+        <div class="main">
+            <br>
+            <nav>
+                <h2>My<span>Vaccine</span></h2>
+                <button class="menu"><i class="fa fa-duotone fa fa-bars" onclick="action()"></i></button>
+                <div class="links">
+                    <div><a href="NavBar.html"><i class="fa fa-solid fa fa-house"></i>Home</a></div>
+                    <div><a href="">Contact</a></div>
+                    <div><a href="">About</a></div>
+                    <div><a href="">Support</a></div>
+                </div>
+                <button id ="vaccination">get vaccinated</button>
+            </nav>
+            <br>
+            <center>
+                <div class="link" id="col">
+                    <div><a href="">Home</a></div>
+                    <div><a href="">Contact</a></div>
+                    <div><a href="">About</a></div>
+                    <div><a href="">Support</a></div>
+                </div>
+            </center>
+            <br>
+        </div>
+        
+
+        <div class="vaccination">
+            <p>Forget Your Pain,Be more alive</p>
+            <button>Find Out More here</button>
+        </div>
+
+        <div class="flexcls">
+            <div class="flexel">
+                <div><img src="col3.jpg" alt=""></div>
+                <div><p>Protection</p></div>
+                <div><p class="main">Get Appointment</p></div>
+            </div>
+            <div class="flexel">
+                <div><img src="col1.jpg" alt=""></div>
+                <div><p>Protection</p></div>
+                <div><p class="main">Get Vaccinated</p></div>
+            </div>
+            <div class="flexel">
+                <div><img src="col2.jpg" alt=""></div>
+                <div><p>Protection</p></div>
+                <div><p class="main">Get Consultation</p></div>
+            </div>
+        </div>
+
+        <div class="grid-container">
+            <div class="image1"></div>
+            <div class="content1">
+                <p class="main">Getting Vaccinated is easier than Ever</p>
+                <br>
+                <p>Mon-Fri: 9 AM – 6 PM</p>
+                <br>
+                <p>Saturday: 9 AM – 4 PM</p>
+                <br>
+                <p>Sunday: Closed</p>
+            </div>
+            <div class="image2"></div>
+        </div>
+
+        <center><button class="submit">Make Appointment</button></center>
+     </div>
+     <script>
+        var var1 = 0;
+        function action(){
+            if(var1 === 0){
+                document.getElementById("col").style.display="flex";
+                var1 = 1;
+            }
+            else{
+                document.getElementById("col").style.display="none";
+                var1 = 0;
+            } 
+
+        }
+    </script>
+</body>
+</html>
+<!--
+<div class="navbar">
+    <div>
+        <img src="logo.png" alt="" class="logo">
+        <p>Aplocalyps</p>
+    </div>
+    <div class="flexlinks">
+    <ul>
+        <li ><a href="Home.html" style="color: black;">Home</a></li>
+        <li><a href="">About</a></li>
+        <li><a href="">Contact</a></li>
+    </ul>
+    </div>
+</div>
+-->

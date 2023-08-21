@@ -1,0 +1,624 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', 'sans-serif';
+    box-sizing: border-box;
+    transition: all 1.5s;
+    font-family: sans-serif;
+} 
+html{
+    scroll-behavior: smooth;
+}
+::-webkit-scrollbar{
+    display: none
+}
+a {
+    text-decoration: none;
+}
+.link a {
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+}
+.main{
+    position : relative;
+    height: 100vh;
+    width: 100%;
+}
+.arrow{
+    position : fixed; 
+    bottom: 10px;
+    right :30px;
+}
+.arrow:hover{
+    color: black;
+}
+nav{
+    height: 60px;
+    position: fixed;
+    background-color: white;
+    top : 0;
+    width: 100%;
+    border-bottom: 1px solid whitesmoke;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 1px 1px 5px 4px rgba(0,0,0,0.2);
+    border-radius: 0px 0px 3px 3px;
+    z-index: 1;
+}
+nav h1{
+    font-size: x-large;
+}
+nav h1 span{
+    color: red;
+}
+nav h1 :hover::after{
+    content: 'by BaluSharma';
+    display: block;
+    color: lightgray;
+    font-size: medium;
+    cursor: pointer;
+}
+nav .menu{
+    margin-right : 10px;
+    display: none;
+    border-color: white;
+    width :20px;
+    border-radius : 50%;
+    cursor: pointer;
+}
+nav .links{
+    display: flex;
+    align-content: center;
+    width: 50%;
+    font-size: 17px;
+    justify-content: space-evenly;
+}
+/* nav .links h2{
+    font-weight: 400;
+} */
+nav .links a{ 
+    color: black;
+    text-transform: capitalize;
+    text-decoration: none;
+}
+nav .links a:hover{
+    color: red;
+    transition: .5s;
+    padding : 0px 10px ;
+    
+}
+button:hover{
+    font-size: larger;
+    cursor: pointer;
+    transform: scale(1.1);
+}
+button p{
+    font-size: 13px;
+}
+#vaccination{
+    background-color: greenyellow;
+    border: 1px dotted wheat;
+    height: 40px;
+    width: 130px;
+    border-radius : 20px;
+    padding: 10px;
+    overflow: hidden;
+}
+.link{
+    position : fixed;
+    padding: 30px;
+    top : 0px;
+    z-index: 1;
+    right : -800px;
+    transition: all 1.5s;
+    background-color: black;
+    color: whitesmoke;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+}
+/* .link div a LL{
+    text-decoration: none;
+    font-size: x-large;
+    color: whitesmoke;
+} */
+.closed{
+    position : relative;
+    border-radius : 50%;
+    background-color: black;
+    align-self: end;
+    /* top : 40px;
+    left : 80px;
+    right  : 0px; */
+}
+.menu:hover{
+    transition: all 0.3s;
+    transform: rotate(180deg);
+}
+.closed:hover{
+    transform: rotate(180deg);        
+}
+#close{
+    background-color: black;
+    border: none;
+}
+#trans{
+    color:transparent;
+}
+.display{
+    width : 100%;
+    height : 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('Images/mypic\ \(1\).jpg');
+    background-size: cover;
+    background-repeat: no-repeat;    
+}
+.display p{
+    color: whitesmoke;
+    font-size: 12vw;
+}
+.fourdiv{
+    background-color: white;
+    display: grid;
+    grid-template-areas: "item1 item2 item3 item4";
+    width : 100%;
+    height: 500px;
+    justify-content: space-evenly;
+    align-items:center;
+}
+.item{
+    height : 250px;
+    width : 250px;
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 1px 1px 5px 4px rgba(0,0,0,0.2);
+}
+.item:hover{
+    transform: scale(0.9);
+}
+.fa-solid{
+    color : red;
+}
+.details{
+    height : 1200px;
+    width: 100%;
+    background-color: aliceblue;
+    display: grid;
+    grid-template-areas: "image1 content1"
+                         "image1 image2"
+                         "content2 image2";
+    align-content: center;
+    justify-content: center;
+    column-gap : 30px;
+    align-items: center;                     
+
+}
+
+.image1{
+    grid-area: image1;
+    width : 40vw;
+    height: 750px;
+    background-color: blueviolet;
+    background-image: url(Images/clay-banks-POzx_amnWJw-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.content1{
+    grid-area: content1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+    height : 300px;
+    width : 40vw;
+}
+.image2{
+    grid-area: image2;
+    width: 40vw;
+    height : 600px;
+    background-color: chartreuse;
+    background-image: url(Images/vaccination-1215279_1920.jpg);
+    background-size: cover;
+}
+.content2{
+    grid-area: content2;
+    height : 100px;
+    width : 40vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.content2 button{
+    background-color:  rgb(146, 168, 235);
+    padding :20px;
+    border: none;
+    color: aliceblue;
+}
+.steps{
+    height : 600px;
+    width: 100%;
+    background-color: transparent;
+    display: grid;
+    grid-template-areas: "first second third";
+    justify-content: space-evenly;
+    align-items : center;
+}
+.first{
+    grid-area: first;
+    display: flex;
+    height: 400px;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.second{
+    grid-area: second;
+    display: flex;
+    height: 400px;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.third{
+    grid-area: third;
+    display: flex;
+    height: 400px;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.circularpic{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    background-color: darkseagreen;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.circularpic2{
+    background-image: url(Images/vaccinated2.jpg);
+    
+}
+.circularpic1{
+    background-image: url(Images/calender-2579300_1920.jpg);
+}
+.circularpic3{
+    background-image: url(Images/pexels-cottonbro-7578816.jpg);
+    background-size: cover;
+}
+.information{
+    height: 600px;
+    width: 100%;
+    background-color: darkseagreen;
+    display: grid;
+    justify-content: space-evenly;
+    align-items: center;
+    grid-template-areas: "infotopic infomatter";
+}
+.infopic{
+    background-color: black;
+    background-image: url(Images/mypic\ \(2\).jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat:no-repeat;
+    height : 400px;
+    width: 45vw;
+    border-radius : 5px 5px 5px 5px;
+}
+.infomatter:hover ,.infopic:hover{
+    transform: scale(0.9);
+}infomatter{
+    background-color: white;
+    height : 400px;
+    width : 45vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Poppins';
+    border-radius: 5px 5px 5px 5px;
+}
+.infomatter li h3{
+    display: inline;
+}
+.oath{
+    height: 300px;
+    width: 100%;
+    background-color: aqua;
+    background-image: url(Images/enric-moreu-rIymmvOq3P8-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    background-repeat: no-repeat;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5vw;
+    color:white;
+}
+progress{
+    height: 30px;
+    width: 100%;
+    display: none;
+}
+.overcontainer{
+    height: 900px;
+    width: 100%;
+    overflow: hidden;
+}
+.overcontainer .containerimg{
+    background-image: url(Images/Mainpic.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 900px;
+}
+.overcontainer .containerimg:hover{
+    transform:scale(1.1)}
+.scrollmain{
+    height : 400px;
+    width: 100%;
+    position : relative;
+    overflow: scroll;
+}
+.scrimg{
+    height: 200px;
+    width : 300px;
+    position : absolute;
+    background-color: aquamarine;
+    top: 100px;
+    border-radius : 30px;
+    background-size: cover;
+}
+.scrimg:hover{
+    transform: scale(1.1);
+}
+.sc1{
+    left : 60px;
+    background-image: url(Images/mypic\ \(1\).jpg);
+}
+.sc2{
+    left : 420px;
+    background-image: url(Images/pexels-tima-miroshnichenko-8376221.jpg);
+}
+.sc3{
+    left : 780px;
+    background-image: url(Images/mypic\ \(3\).jpg);
+}
+.sc4{
+    left : 1140px;
+    background-image: url(Images/pexels-cottonbro-7578816.jpg)
+}
+.sc5{
+    left : 1500px;
+    background-image: url(Images/Vaccin.jpg);
+}
+.sc6{
+    left : 1860px;
+    background-image: url(Images/woman-2141808.jpg);
+}
+.sc7{
+    left : 2220px;
+    background-image: url(Images/Mainpic.jpg);
+    
+}
+.sc8{
+    left : 2580px;
+    background-color: transparent;
+}
+
+.support{
+    height : 400px;
+    width: 100%;
+    background-color: darkslateblue;
+    display : flex;
+    flex-direction: column-reverse;
+    align-items : center;
+    justify-content: space-around;
+
+}
+.suport .names{
+    display : flex;
+    justify-content: space-evenly;
+
+}
+.support span{
+    color: red;
+}
+.support h2{
+    font-size: 4vw;
+}
+.support .names p{
+    display : inline;
+    color : white;
+}
+@media only screen and (max-width: 320px){
+    #vaccination{
+        display: none;
+    }
+    
+}
+/*  Mini Screen Mobile-View*/
+@media only screen and (max-width: 600px){
+    nav .menu{
+        display: block;
+    }
+    nav .links{
+        display: none;
+    }
+}
+/* Laptop View */
+@media (min-width: 601px) and (max-width : 2560px)  {
+    .link{
+        transition: all 1.5s;
+        background-color: white;
+        height: 0vh;
+        width: 0px;
+    }
+    .link{
+        display: none;
+    }
+    #vaccination{
+        margin-right:2%;
+    }   
+}
+/* 2k-View*/
+@media (min-width: 1550px) and (max-width : 2560px){
+    nav{
+        font-size: 9vw;
+    }
+    #vaccination{
+        font-size: 9vw;
+    }
+}
+@media (min-width: 561px) and (max-width : 1100px){
+    .fourdiv{
+        background-color: white;
+        display: grid;
+        grid-template-areas: "item1 item2"
+                             "item3 item4";
+        width : 100%;
+        height: 650px;
+        justify-content: space-around;
+        align-items:center;
+    }
+    
+} 
+@media only screen and (max-width : 560px){
+    .fourdiv{
+        background-color: white;
+        display: grid;
+        grid-template-areas: "item1"
+                             "item2"
+                             "item3"
+                             "item4";
+        width : 100%;
+        height: 1300px;
+        justify-content: space-around;
+        align-items:center;
+    }   
+}
+/* Mobile - View */
+@media only screen and (max-width : 600px){
+    .details{
+        height : 2000px;
+        width: 100%;
+        background-color: aliceblue;
+        display: grid;
+        grid-template-areas: "image1"
+                             "content1"
+                             "image2"
+                             "content2";
+    
+    
+        justify-content: space-evenly;
+        align-items: center;                     
+    }
+    .image1{
+        grid-area: image1;
+        width : 80vw;
+        height: 750px;
+        background-color: blueviolet;
+        background-image: url(Images/clay-banks-POzx_amnWJw-unsplash.jpg);
+        background-position: center;
+        background-size: cover;
+    }
+    .content1{
+        grid-area: content1;
+        height : 300px;
+        width : 80vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    
+    }
+    .content1 h1{
+        font-size: larger;
+    }
+    .content1 h3{
+        font-size: medium;
+    }
+    .image2{
+        grid-area: image2;
+        width: 80vw;
+        height : 600px;
+        background-color: chartreuse;
+        background-image: url(Images/vaccination-1215279_1920.jpg);
+        background-size: cover;
+    }
+
+    .content2{
+        grid-area: content2;
+        height : 100px;
+        width : 80vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    .steps{
+        height : 1400px;
+        width: 100%;
+        background-color: transparent;
+        display: grid;
+        grid-template-areas: "first" "second" "third";
+        justify-content: space-around;
+        align-items : center;
+    }
+    .information{
+        height: 1000px;
+        width: 100%;
+        background-color: darkseagreen;
+        display: grid;
+        justify-content: space-evenly;
+        align-items: center;
+        grid-template-areas: "infotopic" "infomatter";
+    }
+    .infopic{
+        background-color: black;
+        background-image: url(Images/mypic\ \(2\).jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat:no-repeat;
+        height : 400px;
+        width: 80vw;
+        border-radius : 5px 5px 5px 5px;
+    }
+    .infomatter{
+        background-color: white;
+        height : 400px;
+        width : 80vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        font-family: 'Poppins';
+    }
+    .oath{
+        height: 200px;
+        width: 100%;
+        background-color: aqua;
+        background-image: url(Images/enric-moreu-rIymmvOq3P8-unsplash.jpg);
+        background-size: cover;
+        background-position: center;
+        z-index: -1;
+        background-repeat: no-repeat;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2.5vw;
+        color:white
+    }
+}

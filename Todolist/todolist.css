@@ -1,0 +1,137 @@
+body{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    background-color: #06113C;   
+}
+h1,h2{
+    color: whitesmoke;
+}
+h2{
+    text-transform: Capitalize;
+}
+span{
+    color: red;
+}
+h1:hover::after{
+    content: 'by   BaluSharma';
+    display: block;
+    color: lightgray;
+    font-size: medium;
+    cursor: pointer;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.container{
+    border: 6px solid #06113C;
+    box-shadow: 1px 1px 15px 4px rgba(0,0,0,0.6);
+    border-radius: 40px;
+    background-color: black;
+    height: 90vh;
+    width: 90vw;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.inputbox{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.input{
+    border-radius: 12px;
+    padding: 12px 20px;
+    width: 50vw;
+    font-size: medium;
+}
+.btn{
+    color: aliceblue;
+    background:linear-gradient( to bottom right,#06113C,darkslategray,red);
+    font-size: medium;
+    padding: 12px 20px;
+    border-radius: 12px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+input::placeholder{
+    color: cornflowerblue;
+    font-size: larger;
+    align-items: center;
+}
+.tasks{
+    height: 60vh;
+    width: 60vw;
+    display: flex;
+    justify-content: center;
+    overflow: auto;
+}
+.tasks::-webkit-scrollbar{
+    display: none;
+}
+ul{
+    text-align: left;
+}
+li{
+    padding: 10px;
+    margin-bottom: 9px;
+    border-radius: 9px;
+    background: linear-gradient( to bottom right,#06113C,darkslategray,brown);
+    color: white;
+    font-size: 20px;
+    position: relative;
+}
+li::marker{
+    content: '👉 ';
+    color: #06113C;
+}
+a{
+    position: absolute;
+    text-decoration: none;
+    color: red;
+    right: -120px;
+}
+.editor{
+    border-radius: 3px;
+    padding: 3px;
+    position: absolute;
+    right: -70px;
+}
+
+
+@media (min-width: 0px) and (max-width: 630px) {
+    .tasks{
+        height: 70vh;
+        width: 80vw;
+        display: flex;
+        justify-content: start;
+        justify-items: center;
+        overflow: auto;
+    }
+    
+    li{
+        font-size: medium;
+        color: aliceblue;
+        position: relative;
+    }
+    a{
+        position: absolute;
+        text-decoration: none;
+        color: red;
+        right: -60px;
+    }
+    .editor{
+        border-radius: 3px;
+        padding: 3px;
+        position: absolute;
+        right: -35px;
+    }
+}

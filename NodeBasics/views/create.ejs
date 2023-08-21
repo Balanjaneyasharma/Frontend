@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="/stylesheets/create.css">
+</head>
+
+<body>
+    <a href="/blogs" class="back"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+    <form action="/blogs" method="POST">
+        <label for="title">Blog title:</label>
+        <input type="text" name="title" id="title" required>
+        <label for="snippet">Blog snippet:</label>
+        <input type="text" name="snippet" id="snippet" required>
+        <label for="body">Blog body:</label>
+        <textarea name="body" id="body" required></textarea>
+        <button>Submit</button>
+    </form>
+</body>
+</html>

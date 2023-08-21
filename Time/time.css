@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(17895deg,  wheat ,rgb(232, 203, 130),whitesmoke,lightblue,white);
+}
+header {
+    position: absolute;
+    top: min(20%,50px);
+
+}
+header h1{
+    text-align: center;
+    -webkit-text-stroke: 5px;
+    color: lightskyblue ;
+    letter-spacing: 5px;
+    text-shadow: 5px  5px orangered;
+    font-size: 6vw;
+}
+article{
+    text-align: center;
+    font-size: 2vw;
+    color: gray;
+}
+.myline{
+    position: absolute;
+    top: 50%;
+    background-color: orange;
+    height : 25px;
+    width: 100vw;
+}
+.timer{
+    position: relative;
+    height: fit-content;
+    width: fit-content;
+    background-color: lightblue;
+    box-shadow: 1px 2px 2px rgba(221, 209, 209, 0.8),inset 1px 1px 1px rgba(214, 212, 212, 0.3);
+    padding: 20px;
+    border-radius: 20px;
+    font-family: sans-serif;
+}
+.dater{
+    position: absolute;
+    bottom: -90px;
+    left: 50%;
+    transform: translate(-50%,50%);
+}
+section{
+    display: inline-flex;
+}
+.time{
+    height: 100px;
+    width: 100px;
+    border-radius: 20px;
+    font-size: xx-large;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: black;
+    font-weight: bolder;
+    box-shadow: 1px 2px 2px rgba(235, 237, 237, 0.8),inset 1px 2px 2px rgba(86, 96, 101, 0.3);
+}
+#h1{
+    background-color: transparent;
+}
+#h1::after{
+    content: 'Hr';
+    font-size: medium;
+}
+#m1{
+    background-color:  transparent;
+}
+#m1::after{
+    content: 'Min';
+    font-size: medium;
+}
+#s1{
+    background-color:  transparent;
+}
+#s1::after{
+    font-size: medium;
+    content: 'Sec';   
+}
+footer{
+    position: absolute;
+    bottom: 20px;
+    font-size: 2vw;
+}

@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding : 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+a{
+    height : 100px;
+    width : 200px;
+    text-decoration: none;
+    text-align: center;
+    padding: 33px 50px;
+    letter-spacing: 2px;
+    font-size: x-large;
+    background-color: #9CB4CC;
+    clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+}
+a:hover{
+    clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
+}
+a:nth-child(2){
+    padding: 33px 40px;
+    background-color: cyan;
+    clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
+}
+a:nth-child(2):hover{
+    clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+}

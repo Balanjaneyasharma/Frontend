@@ -1,0 +1,136 @@
+.display{
+    height : 300px;
+    width: 500px;
+    overflow: scroll;
+    position : relative;
+}
+.display::-webkit-scrollbar{
+    display: none;
+}
+.matter{
+    height: 300px;
+    width: 200px;
+    background-color: aqua;
+    border: 2px solid transparent;
+    position: absolute;
+    box-shadow: 1px 1px 5px 4px rgba(0,0,0,0.6);
+
+}
+#disp1{
+    background-image: url(vikram1.jpg);
+    background-size: cover;
+}
+#disp2{
+    background-image: url(vikram2.jpg);
+    background-size: cover;
+}
+#disp3{
+    background-image: url(vikram3.jpg);
+    background-size: cover;
+}
+#disp4{
+    background-image: url(vikram4.jpg);
+    background-size: cover;
+    background-position: right;
+}
+#disp5{
+    background-image: url(vikram5.jpg);
+    background-size: cover;
+}
+#disp6{
+    background-image: url(vikram6.jpg);
+    background-size: cover;
+}
+#title{
+    font-size: 9vw; 
+    text-shadow: 3px 2px black; 
+}
+#title::before{
+    content: '';
+    display: block;
+    border-bottom: 10px dotted black;
+    width: 500px;
+}
+#title span{
+    color: red;
+}
+#title::after{
+    content: 'the Hitlist';
+    display: block;
+    font-size: 2vw;
+    text-shadow: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.hoverable{
+    height: 300px;
+    width: 600px;
+    overflow: hidden;
+    border : 2px solid black;
+    border-radius: 30px;
+}
+.hoverable .image{
+    height: 300px;
+    width: 600px;
+    background-image: url(vikram3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.hoverable:hover{
+    height: 300px;
+    width: 600px;
+    background-color: darkslategray;
+    padding: 30px;
+    
+}
+.hoverable:hover .image{
+    height: 300px;
+    width: 300px;
+    background-image: url(vikram1.jpg);
+    border-radius: 50%;
+}
+.content{
+    position: relative;
+    width: 400px;
+    height: 400px;
+    background-image: url(vikram1.jpg);
+    background-size: cover;
+   
+    border-radius: 50%;
+}
+.information{
+    position: absolute;
+    display: block;
+    height : 100px;
+    width: 100px;
+    bottom: 0px;
+    left : 0px;
+    
+}
+.content:hover{
+    z-index: -1;
+}
+.content:hover .information{
+    color: wheat;
+    display: block;
+}
+.flex{
+    height: 20px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+
+}
+p{
+    display: inline;
+}
+a{
+    display: inline;
+    margin: 30px;
+}
+.unlist{
+    height: max-content;
+    width: max-content;
+    padding: 10px;
+    background-color: aqua;
+    border: 1px solid black;
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
+    <title>Document</title>
+    <style>
+        .heading{
+            height: 9%;text-align: center;width: 100%;
+            background-color: #42C2FF;
+            padding-top: 2%;
+            padding-bottom: 2%;
+            border-radius: 1em;    
+        }
+        .heading h1{
+            font-style: italic;
+        }
+        input{
+            border:none;
+            border-bottom: 1px solid black;
+            padding: 12px 20px;
+            border-radius: 20px;
+            width: 100%;   
+        }
+        .userForm{
+            height: 40%;
+            width: 50%;
+            background-color: #139487;
+            border-radius: 1em;
+            padding-left: 1%;
+            padding-right: 1%;   
+        }
+        a h5{
+            color:black;
+            text-align: end;
+        }
+        .mybtn{
+            background-color: transparent;
+            border-radius: 10px;
+            border : 1px solid black;
+            color: black;
+            padding: 10px 50px;
+            margin-left: 1%;
+        }
+        .allignForm{
+            display: flex;
+            justify-content: center;
+        }
+        .container-fluid{
+            margin :auto;
+        } 
+        @media only screen and (max-width: 1000px){
+            .userForm{
+            height: 40%;
+            width: 100%;
+            background-color: #139487;
+            border-radius: 1em;
+            padding-left: 1%;
+            padding-right: 1%;
+            
+        }    
+    }  
+    </style>
+</head>
+<body class="container">
+    <br>
+    <div class="heading">
+        <h1>Login-Form</h1>
+    </div>
+
+    <br><br>
+
+    <div class="allignForm">
+        <form class="userForm" action="/login" method="post">
+            <br><br><br>
+            <input type="text" name="userName" placeholder="👤 UserName" required>
+            <br><br>
+            <input type="password" name="password" id="" placeholder="🔑 Password" required>
+            <br>
+            <!--<a href=""><h5>Forgot Password ?</h5></a>-->
+            <br>
+            <center>
+                <button type="submit" class="btn btn-success mybtn">Login</button>
+            </center>
+            <br><br>
+              
+        </form>
+        
+    </div>
+</body>
+</html>

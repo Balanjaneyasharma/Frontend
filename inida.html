@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.india{
+float : left;
+height: 120px;
+width: 120px;
+margin: auto auto;
+border: 2px solid black;
+border-top : 40px solid orange;
+border-left : 40px solid whitesmoke;
+border-bottom: 40px solid green;
+border-radius: 50%;
+text-align : center;
+font-size: xx-large;
+}
+body{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+}
+.dupindia{
+position : relative;
+left : -467px;
+height: 120px;
+width: 120px;
+margin: auto auto;
+border: 2px solid black;
+border-top : 40px solid orange;
+
+border-right : 40px solid blue;
+border-bottom: 40px solid green;
+border-radius: 50%;
+text-align : center;
+font-size: xx-large;
+border-right : 40px solid whitesmoke;
+}
+.parent{
+    position: relative;
+    height: 300px;
+    width: 300px;
+    z-index: 3;
+    background-color: blueviolet;
+}
+.child{
+    position: absolute;
+    top: 0px;
+    z-index: 0;
+    top : 30px;
+    right  : 19px;
+    height: 200px;
+    width: 200px;
+    background-color: red;
+}
+
+</style>
+
+</head>
+<body>
+<!--<div class = "india">
+this is me
+</div>
+<div class = "dupindia">
+this is another me </div>-->
+<div class="parent ">
+    <div class="child"></div>
+
+</div>
+
+
+
+</body>
+</html>

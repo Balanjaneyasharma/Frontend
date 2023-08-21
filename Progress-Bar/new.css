@@ -1,0 +1,103 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'poppins', 'sans-serif';
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    height : 100vh;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+}
+.grid-container{
+    height: 400px;
+    width: 400px;
+    display: grid;
+    grid-template-areas: "btn1 btn2 btn3"
+                         "btn4 btn5 btn6"
+                         "btn7 btn8 btn9";
+}
+.item{
+    height: 99px;
+    width: 99px;
+    border-radius: 50%;
+    background-color: aquamarine;
+    display: flex;
+    font-size: 34px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+#btn1{
+    grid-area: btn1;
+    background-color: orange;
+}
+#btn2{
+    grid-area: btn2;
+    background-color: yellow;
+}
+#btn3{
+    grid-area:btn3;
+    background-color: green;
+}
+#btn4{
+    grid-area:btn4;
+    background-color: cadetblue;
+}
+#btn5{
+    grid-area:btn5;
+    cursor: pointer;
+    background-color: deeppink;
+}
+#btn6{
+    grid-area:btn6;
+    background-color: lavender;
+}
+#btn7{
+    grid-area:btn7;
+    background-color: lightcoral;
+}
+#btn8{
+    grid-area:btn8;
+    background-color: maroon;
+}
+#btn9{
+    grid-area:btn9;
+    background-color: cornflowerblue;
+}
+.myspace{
+    height: 150px;
+    width: 400px;
+    border-radius: 40px;
+    background-color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bolder;
+    font-size: 70px;
+    font-family:  cursive;
+     -webkit-text-fill-color: transparent;
+     -webkit-text-stroke: 2px  black;
+     letter-spacing: 6px;
+}
+.heading{
+    background:url(pexels-steve-johnson-1704120.jpg);
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: text 2s ease-in-out infinite ;
+    filter:blur(22px);
+}
+.heading:hover{
+    filter: blur(0px);
+}
+@keyframes text {
+    from { background-position: 0% 50%;
+    }
+    to { background-position: 70% 100%;
+    font-size: 99px;} 
+}

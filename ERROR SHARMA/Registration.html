@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
+    <title>Document</title>
+    <script src="/javascripts/Angular.js"></script>
+  
+    <style>
+        input.ng-touched.ng-valid {
+            border: 2px solid greenyellow;
+        }
+        input.ng-touched.ng-invalid{
+            border: 2px solid red;
+        }
+        input{
+            border:none;
+            border-bottom: 1px solid black;
+            padding: 12px 20px;
+            border-radius: 20px;
+            width: 75%;   
+        }
+        .Sports{
+            display: none;width: 50%;
+        }
+        .Clubs{
+            display: none;width: 50%;
+        }
+        #b1{
+            color: royalblue;
+        }
+        .mybtn{
+            background-color: transparent;
+            border-radius: 10px;
+            border : 0.5px solid black;
+            color: black;
+            padding: 10px 50px;
+            
+        }
+        .parclss{
+            color: black;
+            font-weight: bold;
+            font-size: medium;
+        }
+        .radName{
+            font-weight:bolder;
+            font-size: large;
+            color: white;
+            font-style:initial;
+        }
+        .form-control{
+            width: 100%;
+            height: 100%;
+            border-radius: 15px;
+        }
+        .flexcls{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content:space-evenly;
+            align-items: stretch;
+        }
+        #inlined{
+            display: inline;
+            font-size: larger;
+            color: darkslateblue
+        }
+        .flexelements{
+            width: 100%;
+        }
+        @media only screen and (max-width: 800px){
+            input{
+            border:none;
+            border-bottom: 1px solid black;
+            padding: 12px 20px;
+            border-radius: 20px;
+            width: 100%;   
+        }
+
+        }
+    </style>
+</head>
+<body  ng-app="Myapp" ng-controller="MyCtrl" style="background-color: #9400D3;" class="container">
+    <div class="hr1" style="text-align: center;">
+            <h2>Registration Form</h2>
+            <h3>Please Fill in details Here </h3>
+            <br>
+            <center>
+                <h4 id="inlined">Already Registered..??</h4>
+                &nbsp;&nbsp;
+                <a href="login"><button class="btn btn-primary mybtn">Log-In</button></a>
+    
+                <br><br>
+            </center>
+        <hr>
+
+    </div>
+
+    <div>
+
+        <center>
+            <form name="myForm" ng-app="Myapp" ng-controller="MyCtrl" >
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <input type="text" name="Name" ng-model="student.Name" placeholder="👤 Name" required>
+                        <!--<span ng-show="myForm.studentName.$touched && myForm.studentName.$invalid" style="color: red;">!Invalid Username</span>-->
+                    </div>
+                </div>
+
+                <br>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <input type="text" name="Rollno" ng-model="student.Rollno" value="" placeholder="🎓 Roll-no" required>
+                        <!--<span ng-show="myForm.studentRollno.$touched && myForm.studentRollno.$invalid" style="color: red;">!Invalid Roll-no</span>-->
+                    </div>
+                </div>
+
+                <br>
+                
+                <div class="row">
+                    <div class="col-md-4">
+                        <span class="radName">Gender</span>
+                    </div>
+                    <div class="col-md-4">
+                        <input type="radio" name ="gender"/><p class="parclss">Male</p>
+                    </div>
+                    <div class="col-md-4">
+                        <input type="radio" name ="gender"/><p class="parclss">Female</p>
+                    </div>
+                </div>
+
+                <br>
+                
+                <div class="row">
+                    <div class="col-md-4">
+                        <span class="radName">📋Activity</span>
+                    </div>
+                    <div class="col-md-4">
+                        <input type="radio" name ="Activity"onclick="SportsDisplay()"><p class="parclss">Sports</p>
+                    </div>
+                    <div class="col-md-4">
+                        <input type="radio" name ="Activity" onclick="ClubsDisplay()"/><p class="parclss">Club</p>
+                    </div>
+                </div>
+                
+                <br><br>
+                
+                <div class="row flexcls">
+                        <div class="Sports" id="Sports1">
+                            <select class="form-control" ng-model="student.Sports" style="width: 100%;" required>
+                                <option selected><span class="radName">⚽ Sports Options&nbsp;&nbsp;</span></option>
+                                <option>Volley Ball</option>
+                                <option>FootBall</option>
+                                <option>BasketBall</option>
+                                <option>Cricket</option>
+                                <option>Tennis</option>
+                            </select>
+                        </div>
+                    
+                        <div class="Clubs" id="Clubs1">
+                            <select class="form-control" ng-model="student.Clubs" name="Clubs" style="width: 100%;" required>
+                                <option selected><span class="radName">&nbsp;&nbsp;&nbsp;♣️ Clubs &nbsp;&nbsp; &nbsp;</span></option>
+                                <option>Dancing</option>
+                                <option>Painting</option>
+                                <option>Photography</option>
+                                <option>Singing</option>
+                            </select>
+                        </div>
+                </div>
+                
+                <br><br>
+                
+                <div class=" row flexcls">
+                    <div>
+                        <input type="email" name="Email" class="flexelements" ng-model="student.Email" id="" placeholder="✉️ E-Mail"style="width:100%" required>
+                        <!--<span ng-show="myForm.studentEmail.$touched && myForm.studentEmail.$invalid" style="color: red;">!!!Invalid Email</span>-->
+                    </div>
+                    <div>
+                        <input type="tel"  name="Mobile" ng-model="student.Mobile" class="flexelements" placeholder="📱 Mobile-Number" style="width:100%" required>
+                        <!--<span ng-show="myForm.studentMobile.$touched && myForm.studentMobile.$invalid" style="color: red;">!!!Invalid Number</span>-->
+                    </div>
+                </div>
+                
+                <br><br>
+
+                <div class="row flexcls">
+                    <div>
+                        <input type="password" ng-model="student.Password" name="Password" class="flexelements" id="" placeholder=" 🔑 Password" required>
+                    </div>
+                    <div>
+                        <input type="password" ng-model="student.ConfirmPassword" name="ConfirmPassword" class="flexelements"  id="" placeholder="🔐 Confrm-Password" required>
+                    </div>
+                </div>
+
+                <br><br>
+                
+                <div class="row">
+                    <label for="" class="parclss">Date Of Birth</label>
+                    <div class="col-md-12">
+                        <input name="Date" ng-model="student.Date" placeholder=" 📅 Age" type="date" required >
+                        <!--<span ng-show="myForm.studentDate.$touched && myForm.studentDate.$invalid" style="color: red;">!!!Invalid DateOfBirth</span>-->
+                    </div>
+                </div>
+                
+                <br><br>
+
+                <div class="row flexcls">
+                    <div>
+                        <select name="" id="blood" class="form-control" name="BloodGroup" ng-model="student.BloodGroup" name="" style="width: 100%;" onclick="Validate()">
+                            <option  value="0" selected>🩸Blood-Group</option>
+                            <option value="A+">A+</option>
+                            <option value="A-">A-</option>
+                            <option value="B+">B+</option>
+                            <option value="B-">B-</option>
+                            <option value="AB+">AB+</option>
+                            <option value="AB-">AB-</option>
+                            <option value="O+">O+</option>
+                            <option value="O-">O-</option>
+                        </select>
+                        <p id="b1" style="display: none;">Invalid</p>
+                    </div> 
+
+                    <div>
+                        <select name="" ng-model="student.Year" name="Year" id="year" class="form-control" style="width: 100%;">
+                            <option value="" selected>🔚Year of Ending</option>
+                            <option>2021</option>
+                            <option>2022</option>
+                            <option>2023</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <br><br>
+                
+                <button  type="submit" class="btn btn-success mybtn" ng-click="Register(student)">Register</button>
+                
+                <br><br><br>
+            
+            </center>
+        </form>
+        
+    </div>
+    <script type="text/javascript">
+        function Validate() {
+            var blod = document.getElementById("blood");
+            if (blod.value == "0") {
+                //If the "Please Select" option is selected display error.
+                document.getElementById("blood").style.border="2px solid red";  
+            }
+        }
+        function Validated(){
+            
+        }
+        function SportsDisplay(){
+            document.getElementById('Sports1').style.display="block";
+            document.getElementById('Clubs1').style.display="none";
+        }
+        function ClubsDisplay(){
+            document.getElementById('Sports1').style.display="none";
+            document.getElementById('Clubs1').style.display="block";
+        }
+    </script>
+</body>
+</html>
